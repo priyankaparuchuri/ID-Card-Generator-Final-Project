@@ -1,0 +1,144 @@
+:root {
+  /* Id card Standard Width and Height */
+  --horizontal-width: 350px;
+  --horizontal-height: 210px;
+
+  --vertical-width: 210px;
+  --vertical-height: 350px;
+
+  --vertical-image-size: 80px;
+  --horizontal-image-size: 100px;
+}
+
+#id-cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.double-side {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.separator {
+  width: 50px;
+  height: 50px;
+}
+
+.vertical-id .id-container {
+  width: var(--vertical-width) !important;
+  height: var(--vertical-height) !important;
+}
+
+.horizontal-id .id-container {
+  width: var(--horizontal-width) !important;
+  height: var(--horizontal-height) !important;
+}
+
+.horizontal-id .student-full-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.id-container {
+  justify-content: start;
+  padding: 10px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #00d8ff, #89deff, #c3e6ff, #eaf0ff, #ffffff);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.collage-name {
+  text-align: center;
+  margin: 5px 3px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.barcode {
+  width: 100%;
+}
+
+.qrcode img {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.vertical-id .profile-image {
+  width: var(--vertical-image-size) !important;
+  height: var(--vertical-image-size) !important;
+}
+
+.horizontal-id .profile-image {
+  width: var(--horizontal-image-size) !important;
+  height: var(--horizontal-image-size) !important;
+}
+
+.vertical-id .front .profile-image {
+  width: calc(var(--horizontal-image-size) + 60px) !important;
+  height: calc(var(--horizontal-image-size) + 60px) !important;
+}
+
+.horizontal-id .front .profile-image {
+  width: calc(var(--horizontal-image-size) + 20px) !important;
+  height: calc(var(--horizontal-image-size) + 20px) !important;
+}
+
+.profile-image {
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.student-additional-info {
+  margin: 5px;
+}
+
+.horizontal-id .front .student-additional-info {
+  justify-content: end;
+}
+
+.student-name {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.vertical-id .front .student-name {
+  font-size: 16px;
+}
+
+.horizontal-id .front .student-name {
+  font-size: 20px;
+}
+
+.student-info {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5px;
+  margin: 10px;
+}
+
+.heading {
+  text-align: end;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.value {
+  font-size: 14px;
+  text-align: start;
+}
+
+.address {
+  text-align: center;
+  font-size: 12px;
+}

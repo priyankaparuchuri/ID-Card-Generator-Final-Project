@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+
+    <!-- bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- bootstrap Java Script Bundle CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Barcode CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <!-- QR code CDN -->
+    <script defer src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <!-- PDF Generator CDN -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Font Awson CDN for ICONS -->
+    <script src="https://kit.fontawesome.com/ec6cebbabb.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/id_card.css">
+    <link rel="stylesheet" href="css/step_form.css">
+</head>
+
+<body>
+    <!-- Nav Bar Start -->
+    <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1" id="nav-title">ID Card Generator</span>
+            <span class="navbar-brand mb-0 h1" id="collage-title"></span>
+        </div>
+    </nav>
+    <!-- Nav Bar End -->
+
+    <div class="container my-3">
+        <div class="row mx-1">
+            <div class="col-sm p-1">
+                <div class=" custom-input">
+                    <label for="input-type-selection">
+                        <div class="label">Input Type</div>
+                        <select id="input-type-selection" class="" data-name="Input Type">
+                            <option selected disabled>Select Input type</option>
+                            <option value="CSV">CSV File</option>
+                            <option value="MANUAL">Manual</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm p-1 col-sm-8" id="selected-input-type-element">
+            </div>
+        </div>
+        <div class="horizontal-divider"></div>
+
+        <form id="student-details-form"></form>
+
+        <div id="card-design-select" class="id-card-type-selection">
+            <select id="input-type-selection" class="form-select w-50" aria-label="Input Type Selection">
+                <option selected disabled value="">Select ID Card type</option>
+                <option value="VS">Vertical - single side</option>
+                <option value="HS">Horizontal - single side</option>
+                <option value="VD">Vertical - Double side</option>
+                <option value="HD">Horizontal - Double side</option>
+            </select>
+        </div>.
+        <div id="id-cards-container" class="d-flex"></div>
+        <button id="pdf-download">Download</button>
+
+    </div>
+    <script src="js/constants.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/elements_generator.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/step_form.js"></script>
+</body>
+
+</html>
